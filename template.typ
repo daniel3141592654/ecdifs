@@ -30,6 +30,31 @@
 
   set math.equation(numbering: "(1)")
 
+  // As given in the Typst docs.
+
+  show ref: it => {
+    let eq = math.equation
+    let el = it.element
+    // Skip all other references.
+    if el == none or el.func() != eq { return it }
+    // Override equation references.
+    link(el.location(), numbering(
+      el.numbering,
+      ..counter(eq).at(el.location())
+    ))
+  }
+
+  // Now I want to add some style to TOC
+
+  show outline.entry.where(level:3) :it => link(
+    it.element.location(),
+    // Keep just the body, dropping
+    // the fill and the page.
+    it.indented(
+      it.prefix(),
+      it.body(),
+    )
+)
 
   // Title row.
   align(center)[
