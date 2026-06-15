@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "input": "new.typ",
+  "entries": [
+    {
+      "label": "chunk-1",
+      "file": "new.typ",
+      "line": 9,
+      "page": 1
+    }
+  ]
+}

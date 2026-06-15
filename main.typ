@@ -31,6 +31,7 @@ homogénea es con el método de coeficientes
 indeterminados.
 
 == Método de coeficientes indeterminados
+//5 {,}
 
 Este método consiste en dos pasos principales:
 
@@ -46,7 +47,7 @@ $y = y_c + y_p$, en un intervalo $I$.
 Para encontrar una ecuación complementaria es necesario
 primero construir una ecuación a la que se denomina
 _auxiliar_ la cual está dada en términos de la ecuación
-diferencial como:
+diferencial como: //10{,}
 
 $
   a_(n) m^(n) + a_(n-1) m^(n-1) + dots +
@@ -68,7 +69,7 @@ tenemos que definir la solución particular como una
 generalización de los coeficientes presentes en la
 función $g(x)$ a la derecha de la ecuación diferencial.
 
-De esta forma tendríamos algo como:
+De esta forma tendríamos algo como: // 15{,}
 
 $
   y_p = cal(G) (x)
@@ -90,13 +91,41 @@ $ <ec_particular>
 
 Solucionamos para los coeficientes de $y_p$ en la
 @ec_particular y de esta manera tenemos la solución
-particular de la ecuación diferencial no homogénea.
+particular de la ecuación diferencial no homogénea. // 20{,}
+
+== Formas generales de la solución particular
+
+La solución particular $y_p$ puede ser dada con formas
+conocidas para diversas funciones de $g(x)$. Estas
+formas conocidas son:
+
+#let table1 = ```
+|            $g(x)$ | Forma de $y_p$                 |
+| ----------------- | ------------------------------ |
+|         Constante | $A$                            |
+|         $5x + 7$  | $Ax + B$                       |
+|        $3x^2 - 2$ | $Ax^2 + Bx + C$                |
+|       $x^3 -x +1$ | $Ax^3 + Bx^2 + Cx + D$         |
+|       $\sin 4 x$  | $A \cos 4x +B \sin 4x$         |
+|       $\cos 4 x$  | ...                            |
+|       $e^{5x}$    | $A e^{5x}$                     |
+|    $(9x-2)e^{5x}$ | $(Ax+B)e^{5x}$                 |
+|    $x^2 e^{5x}$   | $(Ax^2 +Bx +C)e^{5x}$          |
+|  $e^{3x} \sin 4x$ | $e^{3x}(A \cos 4x +B \sin 4x)$ |
+|  $5x^2 \sin 4x$   | $(Ax^2+Bx+C)\cos 4x + (Dx^2 + Ex + F)\sin 4x$ |
+| $x e^{3x}\cos 4x$ | $(Ax+B)e^{3x}\cos 4x + (Cx+D)e^{3x}\sin 4x$ |
+```
+
+#figure(
+  cmarker.render(table1, math: mitex),
+  caption: [Lista de funciones solución.]
+) <funciones>
 
 === Ejemplo 1
 Nos es dado el sistema no homogéneo a resolver:
 $y'' + 4 y' - 2 y = 2 x^2 -3 x + 6$. Proponer una
 solución usando el método de coeficientes
-indeterminados.
+indeterminados. // 25 {,}
 
 Primero, es necesario solucionar la ecuación homogénea
 asociada al sistema que tenemos, es decir
@@ -131,7 +160,7 @@ los cuales nos determinan los resultados para los
 coeficientes: $cases(-2 A = 2, 8 A - 2 B = -3,2 A + 4 B - 2 C = 6)$
 Del primero, deducimos el valor de
 $A = -1$, luego este lo usamos para calcular $B = -5/2$ y
-finalmente $C = -9$.
+finalmente $C = -9$. // 30 {,}
 
 Por lo tanto la solución particular es $y_p = -x^2 - 5/2 x - 9$
 
@@ -149,3 +178,38 @@ Por su parte, en la solución particular debemos partir por
 separar la función actual en 2 funciones de diferente tipo,
 una polinomial y una exponencial, de manera que tengamos
 $g(x) = g_1 (x) + g_2(x)$.
+
+Reescribimos la función de la forma $g_1(x) = 4 x - 5$, asimismo
+la función exponencial $g_2(x) = 6 x e^(2 x)$. De la @funciones se
+obtiene la forma para reescribir la función particular, como es
+$y_p = A x + B + (C x + D) e^(2 x)$. // 35 {, }
+
+Tomamos las derivadas de $y_p$ de lo cual obtemnemos que
+$y'_p = A + C e^(2 x) + 2 (C x + D) e^(2 x)$ es la primera derivada y
+$y''_p = 4 C e^(2 x) + 4 (C x + D) e^(2 x)$ es la segunda derivada.
+
+La ecuación se reescribe como
+$4 C e^(2 x) + 4 C x e^(2 x) + 4 D e^(2 x) -
+2 A - 2 C e^(2 x) - 4 C x e^(2 x) - 4 D e^(2 x) -
+3 A x - 3 B - 3 C x e^(2 x) - 3 D e^(2 x) =
+4 x - 5 + 6 x e^(2 x)$. De esta forma, se pueden reducir términos
+a la forma:
+$-3 A x -2 A - 3 B + (2 C - 3 D) e^(2 x) + (- 3 C) x e^(2 x) =
+4 x - 5 + 6 x e^(2 x)$. De esto hacemos 4 igualdades para
+encontrar los coeficientes:
+$cases(
+  - 3 A = 4,
+  - 2 A - 3 B = 5,
+  - 3 C = 6,
+  2 C - 3 D = 0
+)$.
+
+Por ende, concluimos que los valores de los coeficientes son
+$A = -4/3$, $B = 23/9$, $C=-2$ y $D=-4/3$. De esta forma, la
+solución general es:
+$y = c_1 e^(-x) + c_2 e^(3 x) - 4/3 x + 23/9 - (2 x + 4/3) e^(2 x)$
+
+
+
+
+
