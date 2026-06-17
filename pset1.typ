@@ -10,27 +10,28 @@
   authors: (
     "Daniel Pi",
   ),
-  date: datetime.today().display("[day] / [month] / [year]")
+  date: datetime.today().display("[day] / [month] / [year]"),
 )
 
+#outline()
 
-#import "tasks.typ" : *
+#import "tasks.typ": *
 // I made this module for pretty-typing my todo's
 
 #task(
   [= Problemas],
   [
-  Resuelve la siguiente ecuación diferencial por coeficientes
-  indeterminados:
+    Resuelve la siguiente ecuación diferencial por coeficientes
+    indeterminados:
 
     + #done $y'' + 7 y' + 6 y = 18$
     + #done $y'' − 8 y' + 16 y = 24 x + 7$
     + #todo $y'' − 8 y' + 20 y = 200 x^2 − 65 x e^x$
     + #done $y'' + 2 y = − 18 x^2 e^(2 x)$
     + #todo $y'' + 2 y' = 2 x + 7 − e^(−2 x)$
-    + #todo $y'' − 2 y' + 37 y = e^x cos(6 x)$
+    + #todo $y'' − 2 y' + 37 y = e^x cos(6 x)$
     + #todo $y'' − 2 y' + 2 y = e^(2 x) (cos x − 4 sin x)$
-  ]
+  ],
 )
 
 #let table1 = ```
@@ -52,7 +53,7 @@
 
 #figure(
   cmarker.render(table1, math: mitex),
-  caption: [Lista de funciones solución. Puede ser de ayuda.]
+  caption: [Lista de funciones solución. Puede ser de ayuda.],
 ) <funciones>
 
 
@@ -80,7 +81,7 @@ $
 $ <aux1>
 
 De esta hallamos sus raíces con _chicharronera_ y probamos que
-la solución complementaria de @aux1 es $m_(1,2) = cases(-6,-1)$.
+la solución complementaria de @aux1 es $m_(1,2) = cases(-6, -1)$.
 Por consiguiente, su solución complementaria es
 $y_c = c_1 e^(-6 x) + c_2 e^(-x)$.
 
@@ -192,16 +193,16 @@ Reducimos los términos y tenemos la expresión:
 $[6 A x^2 + (8 A + 6 B)x + 2 A + 4 B + 6 C] e^(2 x) = -
 18 x^2 e^(2 x)$. Esta última tiene las igualdades
 $cases(
-        6 A = -18,
-        8 A + 6 B = 0,
-        2 A + 4 B + 6 C = 0
-      )$.
+  6 A = -18,
+  8 A + 6 B = 0,
+  2 A + 4 B + 6 C = 0
+)$.
 De aquí deducimos que $A = -3$, $B = 4$ y $C = -5/3$.
 
 Por lo tanto la solución general es:
 $
-  y = c_1 cos( sqrt(2) x ) + c_2 sin( sqrt(2) x )
-  + (-3 x^2 + 4 x  - 5/3 ) e^(2 x)
+  y = c_1 cos(sqrt(2) x) + c_2 sin(sqrt(2) x)
+  + (-3 x^2 + 4 x - 5/3 ) e^(2 x)
 $
 
 5.- Resolver la ecuación diferencial denotada por:
@@ -216,4 +217,48 @@ $m^2 + 2 m = 0$. De esta hallamos las raíces factorizando $m$,
 de modo que la ecuación queda como $m(m+2) = 0$. Las raíces
 para $m$ son $m_1 = -2$ y $m_2 = 0$. Por lo tanto, la solución
 complementaria es $y_c = c_1 e^(-2 x) + c_2$
+
+Reescribirmos la función como una superposición de funciones en
+su forma generalizada como $g_1 (x) = 2 x + 7$ y $g_2 (x) = -e^(-2 x)$.
+De esta manera, tenemos la solución particular denotada por
+$y_p = A x + B + C e^(-2 x)$.
+
+! _Advertencia_: No sé resolver *esto*.
+...
+
+6.- Resolver la ecuación diferencial dada por:
+$
+  y'' − 2 y' + 37 y = e^x cos(6 x)
+$ <six>
+
+De la ecuación @six buscamos la solución complementaria con la
+ecuación auxiliar asolciada. Esta es denotada por
+$m^2 - 2 m + 37 = 0$. De esta cuadrática encontramos las raíces,
+que son complejas y conjugadas, tal que $m_(1,2) = 1 plus.minus 6 i$.
+
+Tomando de nuevo el resultado de la ecuación @solreal, escribimos la
+solución complementaria como:
+
+$
+  y_c = e^(x) [ c_1 cos(6 x) + c_2 sin(6 x) ]
+$
+
+Tomamos la forma general de $g(x)$ lo que nos deja en la forma
+$e^x [A cos(6 x) + B sin(6 x) ]$.
+
+#task(
+  [== Por hacer],
+  [
+    Será necesario bajar al Zill con tal de hallar:
+
+    + #todo Solucionar los problemas 5 y 67.
+    + #done ¿Qué hacer si se repiten varios términos
+      de la solución particular con la complementaria?
+      - RE: Usar el operador _aniquilador_.
+    + #todo Solucionar este caso exacto.
+
+  ],
+)
+
+Tengo más bien pocos ánimos de abrir ese *excelente* libro.
 

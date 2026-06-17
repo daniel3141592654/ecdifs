@@ -1,0 +1,16 @@
+About this thing:
+=================
+
+This stores a really simple template, that is sort of
+based on the article from TeXLive. I also made a couple
+of functions for typing differential equations and
+checklists.
+
+|   Tree of useful things:
+|
+|       |----- ..
+|       |----- .
+|       |----- diffeq.typ
+|       |----- tasks.typ
+|       |----- template.typ
+|

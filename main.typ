@@ -209,7 +209,14 @@ $A = -4/3$, $B = 23/9$, $C=-2$ y $D=-4/3$. De esta forma, la
 solución general es:
 $y = c_1 e^(-x) + c_2 e^(3 x) - 4/3 x + 23/9 - (2 x + 4/3) e^(2 x)$
 
+/*
+#import "diffeq.typ" : *
 
+$#diffeq(
+  (-6,1,0),
+  $y$
+)$
+*/
 
 
 
