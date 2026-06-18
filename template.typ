@@ -6,7 +6,7 @@
   set document(author: authors, title: title)
   set page(paper: "a5", numbering: "1", number-align: center)
   set text(
-    font: "Garamond Libre",
+    font: "TeX Gyre Termes",
     number-type: "old-style",
     lang: "es",
     ligatures: true,
@@ -24,7 +24,7 @@
   }
 
   show math.equation: set text(
-    font: "Garamond-Math",
+    font: "TeX Gyre Termes Math",
     number-type: "old-style",
   )
 
