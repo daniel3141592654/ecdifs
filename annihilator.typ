@@ -51,16 +51,12 @@ las soluciones de las ecuaciones diferenciales:
 @zill
 
 #task(
-  [=== Por hacer],
+  [=== Pendientes del 4.1.],
   [
-    Notas sobre el método del aniquilador.
+    Definiciones conceptuales que debo continuar:
 
     + #todo Teorema 4.1.2
     + #todo Teoremas 4.1.6 y 4.1.7 (¿qué son y qué hacen?).
-    + #done Probar la factorización del operador lineal
-        y de la derivada.
-    + #done Probar/deducir el aniquilador.
-      - Conceptualmente definido, es una idea _simple_.
   ]
 )
 
@@ -79,8 +75,7 @@ $
   L = a_n D^n + a_(n-1) D^(n-1) + dots + a_1 D + a_0
 $
 
-== El operador $L$ es lineal
-
+=== El operador $L$ es *lineal*
 Un operador $L$ se dice que es un operador lineal si se puede
 probar que conserva la operación bajo las condiciones de suma
 y de producto por un escalar, lo que en esencia es que
@@ -96,6 +91,20 @@ $D [f + g (x) ] = D space f (x) + D space g (x)$ y
 $D [c dot f(x) ] = c dot D space f(x)$,
 entonces se puede probar que $L$ también hereda las propiedades,
 y por ende es un operador lineal @zill.
+
+#task(
+  [=== Pendientes del operador lineal],
+  [
+    Conceptos específicos al operador lineal que puede que
+    necesite.
+
+    + #todo Factorización del operador diferencial.
+    + #done Probar que el operador $n$-diferencial es lineal.
+    + #done Probar/deducir el aniquilador.
+      - Conceptualmente definido, es una idea _simple_.
+  ]
+)
+
 
 = El operador aniquilador
 

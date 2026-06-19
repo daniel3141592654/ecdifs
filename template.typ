@@ -16,6 +16,7 @@
   // Set run-in subheadings, starting at level 3.
   show heading: it => {
     if it.level > 2 {
+      v(5pt)
       parbreak()
       text(11pt, style: "italic", weight: "regular", it.body + ".")
     } else {
