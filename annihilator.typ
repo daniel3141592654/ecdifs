@@ -44,7 +44,7 @@ necesario tomar su ecuación homogénea asociada en @homo.
 Asimismo, es clave asumir siempre estas dos condiciones en
 las soluciones de las ecuaciones diferenciales:
 
-+ Todos los coeficientes función $a_i(x)$ y la $g(x)$ son
++ Todos los coeficientes función $a_(i) (x)$ y la $g(x)$ son
   continuas.
 + Que $a_(n) (x) eq.not 0$ para todo el intervalo.
 
@@ -134,6 +134,8 @@ $
 
 Como regla general, para una expresión polinomial se determina
 el aniquilador con el mayor grado del polinomio. @zill
+
+
 
 #quote(
 [Hasta aquí llegué yo]
