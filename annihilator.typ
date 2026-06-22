@@ -121,7 +121,6 @@ Para construir cada caso observamos el grado de cada una de las
 derivadas y respetando los coeficientes que acompaña cada término.
 Entonces factorizamos los operadores:
 
-
 + $D^2 + 7 D + 6$
 + $D^2 − 8 D + 16$
 + $D^2 − 8 D + 20$
@@ -159,13 +158,44 @@ $
 Como regla general, para una expresión polinomial se determina
 el aniquilador con el mayor grado del polinomio. @zill
 
-Estoy usando el *editor* helix. Usando el servidor de Tinymist,
-que hace la edición de archivos .typ mucho mas sencilla.
+// Estoy usando el *editor* helix. Usando el servidor de Tinymist,
+// que hace la edición de archivos .typ mucho mas sencilla.
+// 
+// Hasta aquí volví a llegar yo.
 
-Hasta aquí volví a llegar yo.
+== Funciones generales $g(x)$
 
-#quote(
-  [Hasta aquí llegué yo],
-)
+Estas funciones que suelen aparecer en el lado derecho de la
+ecuación diferencial no homogéna también tienen un operador
+$L$ que corresponde con ser su aniquilador.
+
+=== Regla para polinomios
+Todos los polinomios de grado $m < n$ son aniquilados por el
+operador $D^n$, con $(m,n) in NN$.
+
+Vemos que si tenemos el polinomio
+$c_0 + c_1 x + dots + c_(n-1) x^(n-1)$, cada orden del operador D
+aniquila uno de los términos. Es decir, $D$ es aniquilador para
+$c_0$, $D^2$ lo es para $c_1 x$ y se puede generalizar que
+$D^n$ es aniquilador del término $c_(n-1) x^(n-1)$. Asimismo,
+recordamos que $D^n$ aniquila a todos los $k x^m$ cuyo $m < n$,
+de forma que $D^n$ por su linearidad es aniquilador también de
+la combinación lineal del conjunto de funciones de las que es
+aniquilador.
+
+$
+  c_0 +& c_1 x +& c_2 x^2 +& dots +& c_(n-1) space x^(n-1)
+  \
+  D  quad& D^2  quad& D^3  quad& dots quad& D^n  
+$
+
+Esto significa que cualquier polinomio $P^n (x)$ puede ser
+eliminado por un operador diferencial $D^(m)$ en que $m>n$, con
+$(m,n) in NN$.
+
+==== Función lineal
+La función lineal es el caso particular de un polinomio de
+grado 1, dada por la epxresión general $g(x) = a_0 + a_1 x$.
+Su aniquilador es entonces $D^2$.
 
 #bibliography("zill.yaml")
