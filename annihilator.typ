@@ -27,7 +27,7 @@ Una ecuación diferencial homogénea es aquella ecuación diferencial
 de orden superior la cual es de la forma:
 
 $
-a_n y^((n)) + a_(n-1) y^((n-1)) + dots + a_1 y' + a_0 y = 0
+  a_n y^((n)) + a_(n-1) y^((n-1)) + dots + a_1 y' + a_0 y = 0
 $ <homo>
 
 ... mientras que cualquier otra ecuación de orden superior
@@ -35,7 +35,7 @@ que mantenga igualdad con una expresión $g(x)$ es considerada
 una ecuación diferencial _no homogénea_.
 
 $
-a_n y^((n)) + a_(n-1) y^((n-1)) + dots + a_1 y' + a_0 y = g(x)
+  a_n y^((n)) + a_(n-1) y^((n-1)) + dots + a_1 y' + a_0 y = g(x)
 $ <no-homo>
 
 Para poder resolver la ecuación diferencial en @no-homo es
@@ -57,7 +57,7 @@ las soluciones de las ecuaciones diferenciales:
 
     + #todo Teorema 4.1.2
     + #todo Teoremas 4.1.6 y 4.1.7 (¿qué son y qué hacen?).
-  ]
+  ],
 )
 
 == El operador diferencial
@@ -98,13 +98,37 @@ y por ende es un operador lineal @zill.
     Conceptos específicos al operador lineal que puede que
     necesite.
 
-    + #todo Factorización del operador diferencial.
+    + #done Factorización del operador diferencial.
     + #done Probar que el operador $n$-diferencial es lineal.
     + #done Probar/deducir el aniquilador.
       - Conceptualmente definido, es una idea _simple_.
-  ]
+  ],
 )
 
+=== Ejemplos del operador $D$
+Tomemos las siguientes ecuaciones diferenciales homogéneas
+para construir un operador lineal dado para cada caso.
+
++ $y'' + 7 y' + 6 y = 0$
++ $y'' − 8 y' + 16 y = 0$
++ $y'' − 8 y' + 20 y = 0$
++ $y'' + 2 y = 0$
++ $y'' + 2 y' = 0$
++ $y'' − 2 y' + 37 y = 0$
++ $y'' − 2 y' + 2 y = 0$
+
+Para construir cada caso observamos el grado de cada una de las
+derivadas y respetando los coeficientes que acompaña cada término.
+Entonces factorizamos los operadores:
+
+
++ $D^2 + 7 D + 6$
++ $D^2 − 8 D + 16$
++ $D^2 − 8 D + 20$
++ $D^2 + 2$
++ $D^2 + 2 D$
++ $D^2 − 2 D + 37$
++ $D^2 − 2 D + 2$
 
 = El operador aniquilador
 
@@ -135,11 +159,13 @@ $
 Como regla general, para una expresión polinomial se determina
 el aniquilador con el mayor grado del polinomio. @zill
 
+Estoy usando el *editor* helix. Usando el servidor de Tinymist,
+que hace la edición de archivos .typ mucho mas sencilla.
 
+Hasta aquí volví a llegar yo.
 
 #quote(
-[Hasta aquí llegué yo]
+  [Hasta aquí llegué yo],
 )
 
 #bibliography("zill.yaml")
-

@@ -260,5 +260,4 @@ $e^x [A cos(6 x) + B sin(6 x) ]$.
   ],
 )
 
-Tengo más bien pocos ánimos de abrir ese *excelente* libro.
-
+Tengo más bien _muchos_ ánimos de abrir ese _excelente_ libro.
